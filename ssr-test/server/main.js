@@ -6,5 +6,5 @@ function Html() {
   return /* @__PURE__ */ React.createElement(App, null);
 }
 const html = renderToString(/* @__PURE__ */ React.createElement(Html, null));
-console.log(html);
+//console.log(html);
 export { html };

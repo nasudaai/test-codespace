@@ -1,11 +1,10 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
-import React from 'react'
+//import React from 'react'
 import express from 'express'
-import { renderToString } from 'react-dom/server'
+//import { renderToString } from 'react-dom/server'
 //import App from './server/App.js'
 import { html } from './server/main.js'
-//console.log(html)
 
 //define __dirname
 const __filename = fileURLToPath(import.meta.url)
