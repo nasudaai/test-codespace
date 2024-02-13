@@ -9,6 +9,6 @@ function Html() {
 }
 
 const html = renderToString(<Html />)
-console.log(html)
+//console.log(html)
 
 export { html }
