@@ -3,8 +3,8 @@ import { fileURLToPath } from 'url'
 import React from 'react'
 import express from 'express'
 import { renderToString } from 'react-dom/server'
-import App from './dist/App.js'
-import { html } from './dist/main.js'
+//import App from './server/App.js'
+import { html } from './server/main.js'
 //console.log(html)
 
 //define __dirname
