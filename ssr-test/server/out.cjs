@@ -51,10 +51,7 @@ function App() {
 var App_default = App;
 
 // src/main.jsx
-function Html() {
-  return /* @__PURE__ */ import_react3.default.createElement(App_default, null);
-}
-var html = (0, import_server.renderToString)(/* @__PURE__ */ import_react3.default.createElement(Html, null));
+var html = (0, import_server.renderToString)(/* @__PURE__ */ import_react3.default.createElement(App_default, null));
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   html

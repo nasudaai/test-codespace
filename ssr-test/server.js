@@ -2,9 +2,11 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 //import React from 'react'
 import express from 'express'
-import { renderToString } from 'react-dom/server'
-import App from './server/App.js'
-//import html  from './server/main.cjs'
+//import { renderToString } from 'react-dom/server'
+//import App from './server/App.js'
+import { html }  from './server/out.cjs'
+
+//const html = server.html
 
 //define __dirname
 const __filename = fileURLToPath(import.meta.url)
@@ -16,7 +18,7 @@ const port = 3001
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  const html = renderToString(App())
+  //const html = renderToString(App())
   res.send(html)
 })
 
