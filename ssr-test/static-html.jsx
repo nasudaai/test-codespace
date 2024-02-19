@@ -5,7 +5,7 @@ function Page() {
   return (
     <html>
       <head>
-        <title>title</title>
+        <title>Static Page</title>
       </head>
       <body>
         <h1>Static HTML</h1>

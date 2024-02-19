@@ -1,5 +1,5 @@
 import React from "react"
-import { Counter } from "./components/Counter"
+import { Root } from "./components/Root"
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="styleSheet" href="styles.css"></link>
+        <link rel="styleSheet" href="./styles.css"></link>
         <title>Title</title>
       </head>
       <body>
@@ -20,11 +20,8 @@ function App() {
           <li>flower</li>
           <li>rice</li>
         </ul>
-        <div id="root">
-          <h2>react component</h2>
-          <Counter />
-        </div>
-        <script type="module" src="./main.js"></script>
+        <Root />
+        <script src="./main.js"></script>
       </body>
     </html>
   )

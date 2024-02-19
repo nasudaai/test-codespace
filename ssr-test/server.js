@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url'
 import express from 'express'
 //import { renderToString } from 'react-dom/server'
 //import App from './server/App.js'
-import { html }  from './server/out.cjs'
+import { html }  from './server-render/out.cjs'
 
 //const html = server.html
 

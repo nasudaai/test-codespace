@@ -2382,9 +2382,9 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React4 = require_react();
+          var React5 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React4.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React5.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -3989,7 +3989,7 @@
             {
               if (props.value == null) {
                 if (typeof props.children === "object" && props.children !== null) {
-                  React4.Children.forEach(props.children, function(child) {
+                  React5.Children.forEach(props.children, function(child) {
                     if (child == null) {
                       return;
                     }
@@ -12436,7 +12436,7 @@
             }
           }
           var fakeInternalInstance = {};
-          var emptyRefsObject = new React4.Component().refs;
+          var emptyRefsObject = new React5.Component().refs;
           var didWarnAboutStateAssignmentForComponent;
           var didWarnAboutUninitializedState;
           var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -23507,11 +23507,14 @@
     }
   });
 
-  // src/client.jsx
-  var import_react3 = __toESM(require_react(), 1);
+  // src/client-entry.jsx
+  var import_react4 = __toESM(require_react(), 1);
   var import_client = __toESM(require_client(), 1);
 
   // src/App.jsx
+  var import_react3 = __toESM(require_react(), 1);
+
+  // src/components/Root.jsx
   var import_react2 = __toESM(require_react(), 1);
 
   // src/components/Counter.jsx
@@ -23520,14 +23523,22 @@
     return /* @__PURE__ */ import_react.default.createElement("button", null, "button");
   }
 
+  // src/components/Root.jsx
+  function Root() {
+    return /* @__PURE__ */ import_react2.default.createElement("div", { id: "root" }, /* @__PURE__ */ import_react2.default.createElement("h2", null, "react component"), /* @__PURE__ */ import_react2.default.createElement(Counter, null));
+  }
+
   // src/App.jsx
   function App() {
-    return /* @__PURE__ */ import_react2.default.createElement("html", null, /* @__PURE__ */ import_react2.default.createElement("head", null, /* @__PURE__ */ import_react2.default.createElement("meta", { charSet: "utf-8" }), /* @__PURE__ */ import_react2.default.createElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }), /* @__PURE__ */ import_react2.default.createElement("link", { rel: "styleSheet", href: "styles.css" }), /* @__PURE__ */ import_react2.default.createElement("title", null, "Title")), /* @__PURE__ */ import_react2.default.createElement("body", null, /* @__PURE__ */ import_react2.default.createElement("h1", null, "server render"), /* @__PURE__ */ import_react2.default.createElement("p", null, "server components"), /* @__PURE__ */ import_react2.default.createElement("p", null, "add text"), /* @__PURE__ */ import_react2.default.createElement("ul", null, /* @__PURE__ */ import_react2.default.createElement("li", null, "fish"), /* @__PURE__ */ import_react2.default.createElement("li", null, "flower"), /* @__PURE__ */ import_react2.default.createElement("li", null, "rice")), /* @__PURE__ */ import_react2.default.createElement("div", { id: "root" }, /* @__PURE__ */ import_react2.default.createElement("h2", null, "react component"), /* @__PURE__ */ import_react2.default.createElement(Counter, null)), /* @__PURE__ */ import_react2.default.createElement("script", { type: "module", src: "./main.js" })));
+    return /* @__PURE__ */ import_react3.default.createElement("html", null, /* @__PURE__ */ import_react3.default.createElement("head", null, /* @__PURE__ */ import_react3.default.createElement("meta", { charSet: "utf-8" }), /* @__PURE__ */ import_react3.default.createElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }), /* @__PURE__ */ import_react3.default.createElement("link", { rel: "styleSheet", href: "./styles.css" }), /* @__PURE__ */ import_react3.default.createElement("title", null, "Title")), /* @__PURE__ */ import_react3.default.createElement("body", null, /* @__PURE__ */ import_react3.default.createElement("h1", null, "server render"), /* @__PURE__ */ import_react3.default.createElement("p", null, "server components"), /* @__PURE__ */ import_react3.default.createElement("p", null, "add text"), /* @__PURE__ */ import_react3.default.createElement("ul", null, /* @__PURE__ */ import_react3.default.createElement("li", null, "fish"), /* @__PURE__ */ import_react3.default.createElement("li", null, "flower"), /* @__PURE__ */ import_react3.default.createElement("li", null, "rice")), /* @__PURE__ */ import_react3.default.createElement(Root, null), /* @__PURE__ */ import_react3.default.createElement("script", { src: "./main.js" })));
   }
   var App_default = App;
 
-  // src/client.jsx
-  (0, import_client.hydrateRoot)(document, /* @__PURE__ */ import_react3.default.createElement(App_default, null));
+  // src/client-entry.jsx
+  (0, import_client.hydrateRoot)(
+    document,
+    /* @__PURE__ */ import_react4.default.createElement(App_default, null)
+  );
 })();
 /*! Bundled license information:
 
