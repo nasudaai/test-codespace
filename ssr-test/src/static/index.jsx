@@ -1,20 +1,5 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client'
+import { hydrateRoot, hydrateRootRoot } from 'react-dom/client'
+import { App } from './static-html.jsx'
 
-const root = createRoot(document.getElementById('root'))
-
-
-root.render(
-  <App />
-)
-
-function App() {
-  return (
-    <>
-      <h2>React component</h2>
-      <p>This is static HTML.
-      'express.static'
-      </p>
-    </>
-  )
-}
+hydrateRoot(document.getElementById('root'), <App />)
